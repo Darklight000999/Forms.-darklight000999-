@@ -202,26 +202,29 @@
       color: #fff;
       text-shadow: 0 2px 12px #0042a5c9;
     }
-    .typing {
-      display: inline-block;
-      border-right: 2px solid #fff;
-      white-space: nowrap;
-      overflow: hidden;
-      animation: typing 6s steps(40,end), blinkCursor 0.8s infinite;
-      font-size: 1.05em;
-      line-height: 1.6;
-    }
-    @keyframes typing {
-      from { width: 0 }
-      to { width: 100% }
-    }
-    @keyframes blinkCursor {
-      50% { border-color: transparent; }
-    }
-    @keyframes fadeInInfo {
-      from { opacity: 0; transform: translateY(30px);}
-      to { opacity:1; transform: translateY(0);}
-    }
+  .typing {
+  display: inline-block;
+  border-right: 2px solid #fff;
+  white-space: normal;        /* FIX - अब टेक्स्ट कई लाइनों में टूटेगा */
+  overflow: hidden;
+  animation: typing 5s steps(50,end), blinkCursor 0.8s infinite;
+  font-size: 1.05em;
+  line-height: 1.6;
+  max-width: 100%;            /* Responsive */
+  word-wrap: break-word;      /* लंबे शब्द भी टूटेंगे */
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+@keyframes blinkCursor {
+  50% { border-color: transparent; }
+}
+@keyframes fadeInInfo {
+  from { opacity: 0; transform: translateY(30px);}
+  to { opacity:1; transform: translateY(0);}
+}
   </style>
 </head>
 <body>
