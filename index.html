@@ -2,151 +2,132 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Cyber Security Agency - Hiring Form</title>
+  <title>Cyber Secure Company Forms</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Montserrat', sans-serif;
       min-height: 100vh;
+      background: radial-gradient(circle at top left, #00172e, #00040f);
       color: #e4f1ff;
       overflow-x: hidden;
-      background: #000322;
-      position: relative;
     }
-    /* --- Cyber Animated Background --- */
-    .cyber-bg {
-      position: fixed;
-      top:0; left:0; width:100vw; height:100vh;
-      pointer-events: none;
-      z-index: 0;
-      opacity: .23;
-    }
+
     /* Header */
     .header {
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 44px 0 24px;
-      background: rgba(0, 25, 53, 0.7);
+      padding: 40px 0 20px;
+      background: rgba(0, 25, 53, 0.6);
       backdrop-filter: blur(8px);
-      border-bottom: 1px solid rgba(0,255,255,0.13);
-      box-shadow: 0 5px 25px rgba(0, 180, 255, 0.40);
-      position: relative;
-      z-index: 2;
+      border-bottom: 1px solid rgba(0,255,255,0.2);
+      box-shadow: 0 4px 25px rgba(0, 180, 255, 0.35);
     }
     .header img {
-      height: 72px;
-      margin-right: 20px;
-      filter: drop-shadow(0 0 8px #00eaff);
-      transition: transform 0.35s;
+      height: 70px;
+      margin-right: 18px;
+      transition: transform 0.4s;
+      filter: drop-shadow(0 0 6px #00eaff);
     }
-    .header img:hover { transform: scale(1.10) rotate(-5deg);}
+    .header img:hover { transform: scale(1.08) rotate(-6deg); }
     .header h1 {
       font-family: 'Roboto', sans-serif;
-      font-size: 2.5em;
-      color: #0ff;
-      text-shadow: 0 0 18px #00cfff, 0 0 28px #0066ff;
+      font-size: 2.3em;
+      color: #00eaff;
+      text-shadow: 0 0 18px #009dff88, 0 0 30px #0066ff;
       letter-spacing: 2px;
       margin: 0;
     }
 
-    /* Form */
+    /* Options */
+    .options {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin: 40px 0 45px 0;
+    }
+    .option-btn {
+      padding: 15px 40px;
+      border-radius: 50px;
+      border: none;
+      font-size: 1.2em;
+      font-weight: bold;
+      background: linear-gradient(135deg,#00d4ff,#005eff);
+      color: #fff;
+      letter-spacing: 0.8px;
+      box-shadow: 0 4px 22px rgba(0, 204, 255, 0.3);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .option-btn:hover {
+      background: linear-gradient(135deg,#005eff,#00f0ff);
+      transform: translateY(-3px) scale(1.07);
+      box-shadow: 0 6px 28px rgba(0, 255, 255, 0.6);
+    }
+
+    /* Forms */
     .form-section {
-      z-index: 2;
-      position: relative;
-      max-width: 620px;
+      max-width: 520px;
       margin: 0 auto;
-      padding: 45px 45px 40px 45px;
-      border-radius: 21px;
-      background: rgba(0,10,36,0.83);
-      backdrop-filter: blur(15px);
-      border: 1px solid #00fffacc;
-      box-shadow: 0 0 48px #00eaff38;
+      display: none;
+      padding: 35px 38px 28px;
+      border-radius: 18px;
+      background: rgba(0,15,30,0.8);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(0,255,255,0.18);
+      box-shadow: 0 0 40px rgba(0,180,255,0.45);
       animation: fadeIn 0.7s;
     }
     @keyframes fadeIn {
-      from { opacity:0; transform:scale(0.92);}
-      to { opacity:1; transform:scale(1);}
+      from { opacity: 0; transform: scale(0.92);}
+      to { opacity:1;transform: scale(1);}
     }
     .form-section h3 {
-      margin-top: 2px;
-      font-size: 1.7em;
-      font-weight: 700;
-      color: #00f0ff;
-      text-shadow: 0 0 15px #00eaffb9;
-      letter-spacing: 1.1px;
-      margin-bottom: 26px;
-    }
-
-    fieldset {
-      border: 1px solid #00eaff6a;
-      border-radius: 14px;
-      margin-bottom: 23px;
-      background: rgba(0,20,50,0.45);
-      padding: 25px 20px 18px;
-    }
-    legend {
+      margin-top: 0;
       font-weight: 600;
-      color: #0ff;
-      letter-spacing: 0.5px;
-      font-size: 1.1em;
-      padding: 0 10px;
-      text-shadow:0 0 10px #00eaff33;
+      color: #00f0ff;
+      font-size: 1.6em;
+      text-shadow: 0 0 15px rgba(0,255,255,0.55);
     }
-
-    label {
-      display: block;
-      margin-bottom: 7px;
-      color: #b1d6ff;
-      font-size: 1.08em;
-    }
-    input, select, textarea {
-      font-family: inherit;
+    input, select, textarea, button {
+      font-family: 'Montserrat', sans-serif;
       font-size: 1em;
-      margin-bottom: 18px;
+      margin-bottom: 17px;
       width: 100%;
-      padding: 11px 13px;
+      padding: 12px 15px;
       border-radius: 8px;
-      border: 1px solid #1a6cff66;
-      background: rgba(0,28,68,0.70);
-      color: #e4f1ff;
+      border: 1px solid #00b4ff66;
+      background: rgba(0,28,68,0.5);
+      color: #fff;
       box-sizing: border-box;
       transition: border 0.2s, box-shadow 0.2s;
     }
     input:focus, select:focus, textarea:focus {
-      border: 1.54px solid #00eaff;
-      box-shadow: 0 0 18px #00eaff4c;
+      border: 1.4px solid #00eaff;
+      box-shadow: 0 0 12px #00eaff7d;
       outline: none;
     }
     textarea { resize: vertical; min-height: 90px; }
 
-    .form-section .form-row {
-      display: flex; gap:15px;
-    }
-    .form-section .form-row > div {
-      flex: 1;
-    }
-
     button[type=submit] {
-      margin-top: 8px;
+      margin-top: 10px;
       font-weight: bold;
       letter-spacing: 1px;
       cursor: pointer;
       border: none;
-      padding: 14px 0;
+      padding: 13px;
       border-radius: 10px;
       background: linear-gradient(135deg,#005eff,#00eaff);
       color: #fff;
-      font-size: 1.14em;
       text-transform: uppercase;
-      box-shadow: 0 3px 15px #00cffb30;
-      transition: all 0.21s;
-      width: 100%;
+      box-shadow: 0 3px 14px rgba(0,195,255,0.5);
+      transition: all 0.25s;
     }
     button[type=submit]:hover {
       background: linear-gradient(135deg,#00eaff,#005eff);
-      transform: scale(1.05);
+      transform: translateY(-2px) scale(1.05);
     }
 
     /* Popup */
@@ -154,7 +135,7 @@
       position: fixed;
       top: 0; left: 0;
       width: 100%; height: 100%;
-      background: rgba(0,0,0,0.77);
+      background: rgba(0,0,0,0.7);
       display: flex; align-items: center; justify-content: center;
       visibility: hidden; opacity: 0;
       transition: all 0.4s ease;
@@ -162,142 +143,127 @@
     }
     .popup.active { visibility: visible; opacity: 1; }
     .popup-box {
-      background: #011d38e9;
+      background: #001a33;
       border: 1px solid #00eaff;
-      border-radius: 17px;
-      padding: 47px 33px;
+      border-radius: 16px;
+      padding: 40px 30px;
       text-align: center;
-      width: 335px;
+      width: 330px;
       color:#fff;
-      box-shadow: 0 0 31px #00eaffb9;
-      animation: popUp 0.63s ease;
+      box-shadow: 0 0 28px rgba(0,220,255,0.5);
+      animation: popUp 0.6s ease;
     }
     @keyframes popUp {
       from { transform: scale(0.6); opacity: 0; }
       to { transform: scale(1); opacity: 1; }
     }
     .tick-mark {
-      font-size: 68px;
+      font-size: 70px;
       color: #00ffae;
-      margin-bottom: 17px;
-      text-shadow: 0 0 18px #00ffa2af;
+      margin-bottom: 20px;
+      text-shadow: 0 0 15px #00ffa2;
     }
     .popup-box h2 {
       margin: 0;
-      font-size: 25px;
+      font-size: 24px;
       color: #00eaff;
-      text-shadow: 0 0 9px #00eaff77;
+      text-shadow: 0 0 10px #00eaff8b;
     }
     .popup-box p { margin: 12px 0; font-size: 15px; color: #cceeff; }
     .popup-box button {
-      margin-top: 17px;
+      margin-top: 18px;
       background: linear-gradient(90deg,#00ffa2,#00ffde);
       color: #001025;
       font-weight: bold;
       border: none;
       padding: 10px 22px;
-      font-size: 16px;
+      font-size: 15px;
       border-radius: 8px;
       cursor: pointer;
       transition: transform 0.2s, box-shadow 0.2s;
     }
     .popup-box button:hover { transform: scale(1.07); box-shadow: 0 0 20px #00ffa2; }
 
-    /* Responsive */
-    @media (max-width: 700px) {
-      .form-section {padding:18px 6vw;}
-      .header h1 {font-size:1.2em;}
-      fieldset {padding:15px 4vw;}
+    /* Info Section */
+    .info-section {
+      margin: 70px auto;
+      max-width: 850px;
+      text-align: center;
+      padding: 38px 28px;
+      border-radius: 16px;
+      background: rgba(0,20,40,0.7);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(0,255,255,0.25);
+      color: #e2f8ff;
+      box-shadow: 0 6px 30px rgba(0,200,255,0.18);
     }
+    .info-section h2 {
+      font-size: 2em;
+      margin-bottom: 15px;
+      color: #00eaff;
+      text-shadow: 0 0 12px #00c3ff;
+    }
+    .typing {
+      display: inline-block;
+      border-right: 2px solid #00eaff;
+      white-space: normal;
+      overflow: hidden;
+      animation: typing 5s steps(50,end), blinkCursor 0.8s infinite;
+      font-size: 1.1em;
+      line-height: 1.6;
+      max-width: 100%;
+      word-wrap: break-word;
+    }
+    @keyframes typing { from { width: 0 } to { width: 100% } }
+    @keyframes blinkCursor { 50% { border-color: transparent; } }
+
   </style>
 </head>
 <body>
-  <!-- Animated Cyber Background SVG/Grid Canvas -->
-  <canvas class="cyber-bg" id="cyberBg"></canvas>
-
   <!-- Header -->
   <div class="header">
-    <img src="logo.png" alt="Company Logo"/>
-    <h1>CYBER SECURITY AGENCY - HIRING</h1>
+    <img src="logo.png" alt="Company Logo" />
+    <h1>CYBER SECURE ENTERPRISE</h1>
   </div>
 
-  <!-- Hiring Application Form -->
+  <!-- Options -->
+  <div class="options">
+    <button class="option-btn" onclick="showForm('hiring-form')">Hiring</button>
+    <button class="option-btn" onclick="showForm('joining-form')">Client Support</button>
+  </div>
+
+  <!-- Hiring Form -->
   <form id="hiring-form" class="form-section">
-    <h3>Professional Hiring Application</h3>
+    <h3>Hiring Application</h3>
+    <input type="text" name="name" placeholder="Full Name" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="tel" name="phone" pattern="[0-9]{10}" placeholder="Mobile Number" required>
+    <input type="text" name="qualification" placeholder="Education / Certifications" required>
+    <input type="text" name="experience" placeholder="Experience (years)" required>
+    <input type="text" name="ref" placeholder="Reference (if any)">
+    <input type="text" name="captcha" placeholder="Enter Captcha" required>
+    <button type="submit">Submit Application</button>
+  </form>
 
-    <fieldset>
-      <legend>Personal Details</legend>
-      <div class="form-row">
-        <div>
-          <label for="name">Full Name*</label>
-          <input type="text" name="name" id="name" placeholder="Enter your full name" required>
-        </div>
-        <div>
-          <label for="dob">Date of Birth*</label>
-          <input type="date" name="dob" id="dob" required>
-        </div>
-      </div>
-      <div class="form-row">
-        <div>
-          <label for="email">Official Email*</label>
-          <input type="email" name="email" id="email" placeholder="name@domain.com" required>
-        </div>
-        <div>
-          <label for="phone">Mobile Number*</label>
-          <input type="tel" name="phone" id="phone" pattern="[0-9]{10}" placeholder="10 digit mobile" required>
-        </div>
-      </div>
-      <label for="address">Full Address*</label>
-      <textarea name="address" id="address" rows="2" placeholder="Current Address" required></textarea>
-      <label for="nationality">Nationality*</label>
-      <input type="text" name="nationality" id="nationality" placeholder="Nationality" required>
-    </fieldset>
-
-    <fieldset>
-      <legend>Professional Details</legend>
-      <label for="education">Highest Education / Certifications*</label>
-      <input type="text" name="education" id="education" placeholder="Degree, University, Year" required>
-      <label for="certs">Cyber Certifications</label>
-      <input type="text" name="certs" id="certs" placeholder="(EC-Council, CISSP, CISM, etc.)">
-      <label for="exp">Relevant Experience (Years)*</label>
-      <input type="number" name="exp" id="exp" placeholder="e.g. 5" min="0" required>
-      <label for="skills">Key Skills*</label>
-      <input type="text" name="skills" id="skills" placeholder="Penetration Testing, SIEM, Forensics..." required>
-      <label for="current_role">Current / Last Designation*</label>
-      <input type="text" name="current_role" id="current_role" required>
-      <label for="company">Current / Last Company*</label>
-      <input type="text" name="company" id="company" required>
-      <label for="portfolio">Portfolio / LinkedIn (URL)</label>
-      <input type="url" name="portfolio" id="portfolio" placeholder="linkedin or portfolio site">
-    </fieldset>
-
-    <fieldset>
-      <legend>Security Trust</legend>
-      <label for="bg_check">Have you ever been convicted of a cyber crime?*</label>
-      <select name="bg_check" id="bg_check" required>
-        <option value="">Select</option>
-        <option value="no">No, Never</option>
-        <option value="yes">Yes (specify below)</option>
-      </select>
-      <label for="bg_details">If yes, brief details:</label>
-      <textarea name="bg_details" id="bg_details" rows="2" placeholder="Details..."></textarea>
-      <label for="ref">Reference (internal/external):</label>
-      <input type="text" name="ref" id="ref" placeholder="Reference Name or Code">
-    </fieldset>
-
-    <fieldset>
-      <legend>Other Information</legend>
-      <label for="about">Tell us about yourself (Motivation, why cyber security, any awards, etc.)*</label>
-      <textarea name="about" id="about" rows="3" required></textarea>
-    </fieldset>
-
-    <fieldset>
-      <legend>CAPTCHA</legend>
-      <label for="mathCaptcha">Security Check: Solve — <span id="mathCaptchaQ">25 * 5 = ?</span> *</label>
-      <input type="text" name="mathCaptcha" id="mathCaptcha" placeholder="Your Answer" required>
-    </fieldset>
-
-    <button type="submit">Submit Application Securely</button>
+  <!-- Client Form -->
+  <form id="joining-form" class="form-section">
+    <h3>Cyber Incident Form</h3>
+    <input type="text" name="customer_name" placeholder="Name" required>
+    <input type="email" name="customer_email" placeholder="Email" required>
+    <input type="text" name="customer_phone" pattern="[0-9]{10}" placeholder="Mobile Number" required>
+    <input type="text" name="company" placeholder="Company/Organization">
+    <select name="issue_type" required>
+      <option value="">Select Cyber Issue</option>
+      <option value="data_breach">Data Breach</option>
+      <option value="virus">Virus / Malware</option>
+      <option value="hacking">Hacking Incident</option>
+      <option value="phishing">Phishing Attack</option>
+      <option value="ransomware">Ransomware</option>
+      <option value="other">Other</option>
+    </select>
+    <textarea name="problem_detail" placeholder="Describe Problem in detail..." required></textarea>
+    <input type="text" name="captcha" placeholder="Enter Captcha" required>
+    <button type="submit">Submit Report</button>
   </form>
 
   <!-- Success Popup -->
@@ -305,70 +271,40 @@
     <div class="popup-box">
       <div class="tick-mark">✅</div>
       <h2>Success!</h2>
-      <p>Your application has been submitted securely.</p>
+      <p>Your form has been submitted securely.</p>
       <button onclick="closePopup()">OK</button>
     </div>
   </div>
 
+  <!-- Info Section -->
+  <div class="info-section">
+    <h2>About Us</h2>
+    <p class="typing">
+      We are a Global Cyber Security Enterprise, protecting businesses and individuals from cyber threats including data breaches, malware intrusions, ransomware, and phishing attacks. Our mission is simple: Secure the digital world with futuristic technologies and ethical expertise.
+    </p>
+  </div>
+
   <script>
-    // Math captcha generator
-    function randomMathCaptcha() {
-      const ops = [{op:"+",cb:(a,b)=>a+b},{op:"-",cb:(a,b)=>a-b},{op:"*",cb:(a,b)=>a*b}];
-      const opObj = ops[Math.floor(Math.random() * ops.length)];
-      const a = Math.floor(Math.random()*30)+10;
-      const b = Math.floor(Math.random()*10)+3;
-      window.captcha_ans = opObj.cb(a,b);
-      document.getElementById('mathCaptchaQ').textContent = a + ' ' + opObj.op + ' ' + b + ' = ?';
+    function showForm(id) {
+      document.getElementById('hiring-form').style.display = 'none';
+      document.getElementById('joining-form').style.display = 'none';
+      setTimeout(function(){
+        document.getElementById(id).style.display = 'block';
+      },180);
     }
-    randomMathCaptcha();
 
-    // Cyber SVG grid anim
-    const gridCanvas = document.getElementById('cyberBg');
-    gridCanvas.width = window.innerWidth;
-    gridCanvas.height = window.innerHeight;
-    const ctx = gridCanvas.getContext('2d');
-    function drawGridAnim(t){
-      ctx.clearRect(0,0,gridCanvas.width,gridCanvas.height);
-      let spacing = 48, lines = 18, speed = 0.04;
-      for(let i=0;i<gridCanvas.width;i+=spacing){
-        ctx.strokeStyle = "#00eaff66";
-        ctx.beginPath();
-        ctx.moveTo(i,0);
-        ctx.lineTo(i,gridCanvas.height);
-        ctx.stroke();
-      }
-      for(let j=0;j<gridCanvas.height;j+=spacing){
-        ctx.strokeStyle = "#0063ee44";
-        ctx.beginPath();
-        ctx.moveTo(0,j + Math.sin((t/500+j/30))*8 );
-        ctx.lineTo(gridCanvas.width,j + Math.sin((t/500+j/30))*8 );
-        ctx.stroke();
-      }
-      requestAnimationFrame(drawGridAnim);
-    }
-    drawGridAnim(0);
-
-    // Popup and validation
     const popup = document.getElementById("popup");
-    document.getElementById("hiring-form").addEventListener("submit",function(e){
-      e.preventDefault();
-      // Math captcha check
-      const captchaEntered = parseInt(document.getElementById("mathCaptcha").value);
-      if (isNaN(captchaEntered) || captchaEntered !== window.captcha_ans) {
-        alert("Incorrect captcha answer. Try again!");
-        randomMathCaptcha();
-        document.getElementById("mathCaptcha").value = '';
-        return false;
-      }
-      popup.classList.add("active");
-    });
-    function closePopup() { popup.classList.remove("active"); }
 
-    // On resize, keep bg canvas full window
-    window.addEventListener('resize',function(){
-      gridCanvas.width = window.innerWidth;
-      gridCanvas.height = window.innerHeight;
+    document.querySelectorAll("form").forEach(form => {
+      form.addEventListener("submit", function(e){
+        e.preventDefault();
+        popup.classList.add("active");
+      });
     });
+
+    function closePopup() {
+      popup.classList.remove("active");
+    }
   </script>
 </body>
 </html>
